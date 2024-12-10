@@ -20,6 +20,12 @@ const modelPrices = {
   
   function calculateTotalPrice(shoppingCart, prices) {
     // Din kod här
+    let total = 0;
+    for(let i = 0; i < shoppingCart.length; i++) {
+        total += prices[shoppingCart[i].model];  
+    }
+    return total;
+    //return shoppingCart.reduce((total, product) => total + prices[product.model], 0)
 
   }
   

@@ -6,6 +6,7 @@ const element = document.querySelector("#my-element");
 
 function addBgColor(element, bgColor) {
   // lägg till din kod här
+  element.style.backgroundColor = bgColor;
 }
 
 addBgColor(element, "#ff0000"); // Ska göra elementet rött

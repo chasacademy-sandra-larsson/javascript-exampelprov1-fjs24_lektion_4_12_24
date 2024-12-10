@@ -8,8 +8,12 @@ async function getTodos() {
     // Din kod här
     const response = await fetch("https://jsonplaceholder.typicode.com/todos");
 
+
     const todos = await response.json();
     
+    console.log(todos)
+
+
     const html = todos
         .filter((todo) => todo.userId === 1)
         .map(todo => `<li><p>${todo.title}</p>
@@ -40,13 +44,14 @@ async function getTodos() {
       if(e.target.innerText === "Done") {
         e.target.innerText = "Undo";
         const closest = e.target.closest("li");
-        closest.classList.add("done");
+        const p = closest.querySelector("p")
+        p.classList.add("done");
 
       } else if((e.target.innerText === "Undo")) {
         e.target.innerText = "Done";
         const closest = e.target.closest("li");
-        closest.classList.remove("done");
-
+        const p = closest.querySelector("p")
+        p.classList.remove("done");
       }
         
   }

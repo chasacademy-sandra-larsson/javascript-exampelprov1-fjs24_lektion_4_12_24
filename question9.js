@@ -14,6 +14,8 @@ const shoppingCart = [
 
 function calculateTotalPrice(shoppingCart) {
   // Din kod här
+  return shoppingCart.reduce((total, product) => total + product.price, 0);
+
 }
 
 console.log(calculateTotalPrice(shoppingCart)); // Ska logga 210

@@ -19,7 +19,7 @@ async function getPosts() {
              </p>
            </li>`).join("")
  
- 
+
      postsEl.innerHTML = html;
  
 
